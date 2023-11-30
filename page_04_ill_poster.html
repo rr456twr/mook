@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <style>
+    header ul a {
+      color: #140017 !important;
+    }
+
+    header {
+      background-color: #ffffff;
+    }
+
+    header ul a:hover {
+      color: #6425f3 !important;
+      font-weight: 600;
+    }
+
+    header ul li {
+      margin-top: 16px;
+      font-family: "Inter-Medium", Helvetica;
+      font-weight: 500;
+      color: #140017;
+      font-size: 25.1px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+
+
+    }
+
+    header .top {
+      position: fixed;
+      z-index: 5;
+      /* background-color: antiquewhite; */
+      /* margin-left: 350px; */
+      background: rgba(255, 255, 255, 0.40);
+      width: 100%;
+      top: 0;
+    }
+
+    ul li::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 1px;
+      margin: auto;
+      background-color: #6425f3;
+      transition: width 0.3s;
+    }
+
+    ul li:hover::after {
+      width: 50px;
+    }
+
+    header .right {
+      margin-left: 430px;
+      /* margin-right: 40px; */
+    }
+
+    picture .block1,
+    .block2,
+    .block3 {
+      display: flex;
+      align-items: center;
+
+      margin-top: 200px;
+    }
+
+    .pic1 img {
+      margin-left: 100px;
+      margin-top: 64px;
+    }
+
+    .block1 .doc1 {
+      margin-left: 64px;
+      margin-top: 200px;
+    }
+
+    .pic2 img {
+      margin-left: 100px;
+      margin-top: 16px;
+    }
+
+    .block2 .doc2 {
+      margin-left: 300px;
+    }
+
+    .block1 .doc1 h4,
+    span {
+      font-family: "Inter-Medium", Helvetica;
+    }
+
+    .pic3 img {
+      margin-left: 100px;
+      margin-top: 16px;
+      margin-bottom: 64px;
+    }
+
+    .block3 .doc3 {
+      margin-left: 64px;
+    }
+
+    .head_img1 img {
+      position: absolute;
+      left: 0;
+      bottom: -1500px;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 1;
+    }
+
+    .head_img2 img {
+      position: absolute;
+      left: 0;
+      top: 500px;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      opacity: 1;
+    }
+
+    .pic01 img {
+      margin-left: 100px;
+      margin-top: -500px;
+    }
+
+    .pic02 img {
+      margin-top: -450px;
+    }
+
+    .pic03 img {
+      margin-left: 100px;
+      margin-top: -600px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="head_img1">
+    <img src="./21.png" alt="">
+  </div>
+  <div class="head_img2">
+    <img src="./22.png" alt="">
+  </div>
+
+  <header>
+    <div class="top">
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./page_1.html">App ui</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./page_2_web.html">Web ui</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./page_3_ill .html">Illustration</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./page_4_photo  .html">Photography</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">poster design</a>
+        </li> -->
+        <div class="right">
+          <li class="nav-item">
+            <a class="nav-link" href="./page_06_contact.html">Contact Me</a>
+          </li>
+        </div>
+      </ul>
+    </div>
+  </header>
+
+  <picture>
+    <div class="block1">
+      <div class="pic01">
+        <img src="./23.png" alt="">
+      </div>
+      <div class="pic1">
+        <img data-ut="lightbox-image"
+          src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/20e972174418559.64a286296eea9.png"
+          srcset="https://mir-s3-cdn-cf.behance.net/project_modules/disp/20e972174418559.64a286296eea9.png 446w,"
+          sizes="(max-width: 446px) 100vw, 446px">
+      </div>
+      <div class="doc1">
+        <h4>《信之所向,2022.01》<h4>
+            <span>以主角「安」對未來的迷茫徬徨為設計靈感，背景以溫暖的氣氛作為烘托，<br>
+              藉以比喻媽媽的溫柔永遠陪伴著主角,度過任何難關。</span>
+      </div>
+
+    </div>
+
+    <div class="block2">
+
+      <div class="doc2">
+        <h4>《信之所向02,2022.01》<h4>
+            <span>兩人雖背對背，但卻緊緊地靠在一起，就如同安與母親表面看似不合，<br>
+              但卻對彼此有最誠摯的掛念。<br>
+              也藉由劇中信物代表：耳機以及信，來代表母親對安的關心以及思念。
+            </span>
+      </div>
+      <div class="pic2">
+        <img data-ut="lightbox-image"
+          src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/51cb66174418559.64a286296d3b9.png"
+          srcset="https://mir-s3-cdn-cf.behance.net/project_modules/disp/51cb66174418559.64a286296d3b9.png 445w,"
+          sizes="(max-width: 445px) 100vw, 445px">
+      </div>
+      <div class="pic02">
+        <img src="./24.png" alt="">
+      </div>
+
+
+    </div>
+
+    <div class="block3">
+      <div class="pic03">
+        <img src="./25.png" alt="">
+      </div>
+
+
+
+      <div class="pic3">
+        <img data-ut="lightbox-image"
+          src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/12d70a174418559.64a286296e0b6.png"
+          srcset="https://mir-s3-cdn-cf.behance.net/project_modules/disp/12d70a174418559.64a286296e0b6.png 447w,"
+          sizes="(max-width: 447px) 100vw, 447px">
+      </div>
+      <div class="doc3">
+        <h4>《阿嬤的陽春麵,2022.01》<h4>
+            <span>以主角阿強和小男孩作為主題，呈現暖心的氣氛為主。
+            </span>
+      </div>
+    </div>
+
+
+
+
+
+  </picture>
+
+
+</body>
+
+</html>

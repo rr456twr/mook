@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <style>
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      margin: auto;
+    }
+
+    header ul a {
+      color: #140017 !important;
+    }
+
+    header {
+      background-color: #ffffff;
+    }
+
+    header ul a:hover {
+      color: #6425f3 !important;
+      font-weight: 600;
+    }
+
+    header ul li {
+      margin-top: 16px;
+      font-family: "Inter-Medium", Helvetica;
+      font-weight: 500;
+      color: #140017;
+      font-size: 25.1px;
+      letter-spacing: 0;
+      line-height: normal;
+      white-space: nowrap;
+
+
+    }
+
+    header .top {
+      position: fixed;
+      z-index: 5;
+      /* background-color: antiquewhite; */
+      /* margin-left: 350px; */
+      background: rgba(255, 255, 255, 0.40);
+      width: 100%;
+    }
+
+    ul li::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 1px;
+      margin: auto;
+      background-color: #6425f3;
+      transition: width 0.3s;
+    }
+
+    ul li:hover::after {
+      width: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="top">
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./page_1.html">App ui</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./page_2_web.html">Web ui</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./page_3_ill .html">Illustration</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./page_4_photo  .html">Photography</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">poster design</a>
+        </li> -->
+        <div class="right">
+          <li class="nav-item">
+            <a class="nav-link" href="./page_06_contact.html">Contact Me</a>
+          </li>
+        </div>
+      </ul>
+    </div>
+  </header>
+  <img data-ut="lightbox-image"
+    src="https://mir-s3-cdn-cf.behance.net/project_modules/max_3840/85600b174416539.64a27ec27c767.png">
+
+
+</body>
+
+</html>
