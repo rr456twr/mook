@@ -23,22 +23,40 @@ header ul li{
     font-family: "Inter-Medium", Helvetica;
     font-weight: 500;
     color: #140017;
-    font-size: 25.1px;
+    font-size: 18px;
     letter-spacing: 0;
     line-height: normal;
     white-space: nowrap;
-
-
 }
 
 header .top{
     position: fixed;
     z-index: 5;
-    /* background-color: antiquewhite; */
-    /* margin-left: 350px; */
     background: rgba(255, 255, 255, 0.40);
     width: 100%;
 }
+
+/* ── Hamburger ── */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 12px 16px;
+    background: none;
+    border: none;
+    z-index: 10;
+}
+.hamburger span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: #140017;
+    transition: all 0.3s;
+}
+.hamburger.active span:nth-child(1){ transform: rotate(45deg) translate(5px,5px); }
+.hamburger.active span:nth-child(2){ opacity: 0; }
+.hamburger.active span:nth-child(3){ transform: rotate(-45deg) translate(5px,-5px); }
 
 ul li::after{
     content: "";
@@ -49,10 +67,10 @@ ul li::after{
     background-color: #6425f3;
     transition: width 0.3s;
 }
-
 ul li:hover::after{
     width: 50px;
 }
+
 .div_background{
     position: relative;
     height: 100%;
@@ -62,19 +80,15 @@ ul li:hover::after{
     background-size: cover;
     height: 100%;
     width: 100%;
-    
 }
 
 header .doc{
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50% -50%);
-    margin-left: -117.29px;
-    margin-top: -56.5px;
+    transform: translate(-50%, -50%);
 }
 header .span{
-    
     text-shadow: 0px 3.35px 3.35px #00000040;
     font-family: "Inter-Medium", Helvetica;
     font-weight: 500;
@@ -84,9 +98,7 @@ header .span{
     line-height: normal;
     white-space: nowrap;
 }
-
 header h3{
-    
     text-shadow: 0px 3.35px 3.35px #00000040;
     font-family: "Inter-Black", Helvetica;
     font-weight: 900;
@@ -96,36 +108,24 @@ header h3{
     line-height: normal;
 }
 
+/* ── Banner ── */
 .banner img{
     width: 100%;
-    padding: top 100px; ;
 }
 .banner .pic{
     width: 50%;
 }
-
 .banner .text{
     width: 50%;
-    animation: fade 2s linear 0s ;
+    animation: fade 2s linear 0s;
 }
-
-@keyframes fade {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
 .banner .intro{
     width: 50%;
+    margin-left: 40px;
 }
-
-.background .intro2{
+.banner .intro2{
     width: 50%;
 }
-
 .banner .list{
     font-family: "Inter-Medium", Helvetica;
     font-weight: 500;
@@ -133,47 +133,29 @@ header h3{
     display: flex;
     margin: auto;
     justify-content: space-evenly;
-    align-items: center;   
+    align-items: center;
 }
 
-.banner .intro{
-    margin-left: 40px;
-}
-
-/* .skills{
-    display: flex;
-} */
-
-.skills  .self span{
+/* ── Skills ── */
+.skills .self span{
     display: block;
     width: fit-content;
     margin: auto;
-    
     color: #000;
     font-family: "Inter-Black", Helvetica;
     font-size: 16px;
     font-style: normal;
     font-weight: 550;
     line-height: normal;
-    letter-spacing: 0.96px; 
-    animation: fade 2s linear 0s    
+    letter-spacing: 0.96px;
+    animation: fade 2s linear 0s;
 }
-@keyframes fade {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-.skills  {
+.skills{
     width: 100%;
 }
-.skills  .self{
-    /* width: 100%; */
+.skills .self{
     margin: 97px;
 }
-
 .skills .skills2 img{
     position: absolute;
     right: 350px;
@@ -194,6 +176,139 @@ header h3{
 
 header .right {
     margin-left: 430px;
-    /* margin-right: 300px; */
-  }
-  
+}
+
+@keyframes fade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* ════════════════════════════════
+   RWD — Tablet (≤ 992px)
+════════════════════════════════ */
+@media (max-width: 992px) {
+    header ul li {
+        font-size: 15px;
+    }
+    header .right {
+        margin-left: 40px;
+    }
+    .banner .list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .banner .pic {
+        width: 100%;
+    }
+    .banner .text {
+        width: 100%;
+    }
+    .banner .intro,
+    .banner .intro2 {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* ════════════════════════════════
+   RWD — Mobile (≤ 768px)
+════════════════════════════════ */
+@media (max-width: 768px) {
+
+    /* ── Navbar 漢堡選單 ── */
+    .hamburger {
+        display: flex;
+    }
+
+    header .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 16px;
+        background: rgba(255,255,255,0.95);
+    }
+
+    header .top .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 56px;
+        left: 0;
+        width: 100%;
+        background: rgba(255,255,255,0.97);
+        padding: 16px 0;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    header .top .nav.show {
+        display: flex;
+    }
+
+    header ul li {
+        font-size: 16px;
+        margin-top: 4px;
+        text-align: center;
+    }
+
+    header .right {
+        margin-left: 0;
+    }
+
+    /* ── Hero ── */
+    header .span {
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    header h3 {
+        font-size: 34px;
+    }
+
+    /* ── Banner ── */
+    .banner .list {
+        flex-direction: column;
+        width: 95%;
+        padding: 16px 0;
+    }
+    .banner .pic {
+        width: 100%;
+    }
+    .banner .text {
+        width: 100%;
+    }
+    .banner .intro,
+    .banner .intro2 {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 8px;
+    }
+
+    /* ── Skills ── */
+    .skills .self {
+        margin: 24px 16px;
+    }
+    .skills .self span {
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        width: 100%;
+    }
+
+    /* ── Bottom pic ── */
+    .bottom_pic img {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        width: 100%;
+        height: auto;
+        opacity: 0.3;
+    }
+}
+
+/* ════════════════════════════════
+   RWD — Small Mobile (≤ 480px)
+════════════════════════════════ */
+@media (max-width: 480px) {
+    header .span { font-size: 16px; }
+    header h3    { font-size: 26px; }
+    .skills .self { margin: 16px 10px; }
+    .skills .self span { font-size: 13px; }
+}
